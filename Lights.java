@@ -156,216 +156,183 @@ class Lights {
     int colorIndex = 0;
     if (flagIndex == 0) {
       for (int index = 0; index < LEDBuffer.getLength(); index++) {
-        if (colorIndex == 0 || colorIndex == 6) {
-          LEDBuffer.setRGB(index, 88, 196, 236);
-        } else if (colorIndex == 1 || colorIndex == 5) {
-          LEDBuffer.setRGB(index, 240, 204, 220);
-        } else if (colorIndex == 2 || colorIndex == 4) {
-          LEDBuffer.setRGB(index, 240, 164, 196);
-        } else if (colorIndex == 3) {
-          LEDBuffer.setRGB(index, 240, 132, 180);
+        switch (colorIndex) {
+          case 0: LEDBuffer.setRGB(index, 88, 196, 236);
+          case 1: LEDBuffer.setRGB(index, 240, 204, 220);
+          case 2: LEDBuffer.setRGB(index, 240, 164, 196);
+          case 4 :LEDBuffer.setRGB(index, 240, 164, 196);
+          case 5: LEDBuffer.setRGB(index, 240, 204, 220);
+          case 6: LEDBuffer.setRGB(index, 88, 196, 236);
         }
         colorIndex += colorIndex == 6 ? -6 : 1;
         flagIndex += loop ? 1 : 0;
       }//for
     } else if (flagIndex == 1) {
       for (int index = 0; index < LEDBuffer.getLength(); index++) {
-        if (colorIndex == 0) {
-          LEDBuffer.setRGB(index, 255, 138, 189);
-        } else if (colorIndex == 1 ||colorIndex == 6) {
-          LEDBuffer.setRGB(index, 205, 245, 254);
-        } else if (colorIndex == 2|| colorIndex == 5) {
-          LEDBuffer.setRGB(index, 154, 235, 255);
-        } else if (colorIndex == 3 || colorIndex == 4) {
-          LEDBuffer.setRGB(index, 116, 223, 255);
+        switch (colorIndex) {
+          case 0: LEDBuffer.setRGB(index, 255, 138, 189);
+          case 1: LEDBuffer.setRGB(index, 205, 245, 254);
+          case 2: LEDBuffer.setRGB(index, 154, 235, 255);
+          case 3: LEDBuffer.setRGB(index, 116, 223, 255);
+          case 4: LEDBuffer.setRGB(index, 116, 223, 255);
+          case 5:LEDBuffer.setRGB(index, 154, 235, 255);
+          case 6: LEDBuffer.setRGB(index, 205, 245, 254);
         }
         colorIndex += colorIndex == 6 ? -6 : 1;
         flagIndex += loop ? 1 : 0;
       }
     } else if (flagIndex == 2) {
       for (int index = 0; index < LEDBuffer.getLength(); index++) {
-        if (colorIndex == 0 || colorIndex == 4) {
-          LEDBuffer.setRGB(index, 91, 206, 250);
-        } else if (colorIndex == 1 || colorIndex == 3) {
-          LEDBuffer.setRGB(index, 245, 169, 184);
-        } else if (colorIndex == 2) {
-          LEDBuffer.setRGB(index, 255, 255, 255);
+        switch (colorIndex) {
+          case 0: LEDBuffer.setRGB(index, 91, 206, 250);
+          case 1: LEDBuffer.setRGB(index, 245, 169, 184);
+          case 2: EDBuffer.setRGB(index, 255, 255, 255);
+          case 3: LEDBuffer.setRGB(index, 245, 169, 184);
+          case 4: LEDBuffer.setRGB(index, 91, 206, 250);
         }
         colorIndex += colorIndex == 4 ? -4 : 1;
         flagIndex += loop ? 1 : 0;
       }
     } else if (flagIndex == 3) {
       for (int index = 0; index < LEDBuffer.getLength(); index++) {
-        if (colorIndex == 0 || colorIndex == 6) {
-          LEDBuffer.setRGB(index, 127, 127, 127);
-        } else if (colorIndex == 1 || colorIndex == 5) {
-          LEDBuffer.setRGB(index, 196, 196, 196);
-        } else if (colorIndex == 2 || colorIndex == 4) {
-          LEDBuffer.setRGB(index, 253, 173, 200);
-        } else if (colorIndex == 3) {
-          LEDBuffer.setRGB(index, 255, 255, 255);
+         switch (colorIndex) {
+          case 0: LEDBuffer.setRGB(index, 127, 127, 127);
+          case 1: LEDBuffer.setRGB(index, 196, 196, 196);
+          case 2: LEDBuffer.setRGB(index, 253, 173, 200);
+          case 3: LEDBuffer.setRGB(index, 255, 255, 255);
+          case 4: LEDBuffer.setRGB(index, 253, 173, 200);
+          case 5: LEDBuffer.setRGB(index, 196, 196, 196);
+          case 6: LEDBuffer.setRGB(index, 127, 127, 127);
         }
         colorIndex += colorIndex == 6 ? -6 : 1;
         flagIndex += loop ? 1 : 0;
       }
     } else if (flagIndex == 4) {
       for (int index = 0; index < LEDBuffer.getLength(); index++) {
-        if (colorIndex == 0 || colorIndex == 6) {
-          LEDBuffer.setRGB(index, 127, 127, 127);
-        } else if (colorIndex == 1 || colorIndex == 5) {
-          LEDBuffer.setRGB(index, 196, 196, 196);
-        } else if (colorIndex == 2 || colorIndex == 4) {
-          LEDBuffer.setRGB(index, 157, 215, 234);
-        } else if (colorIndex == 3) {
-          LEDBuffer.setRGB(index, 255, 255, 255);
+         switch (colorIndex) {
+          case 0: LEDBuffer.setRGB(index, 127, 127, 127);
+          case 1: LEDBuffer.setRGB(index, 196, 196, 196);
+          case 2: LEDBuffer.setRGB(index, 157, 215, 234);
+          case 3: LEDBuffer.setRGB(index, 255, 255, 255);
+          case 4: LEDBuffer.setRGB(index, 157, 215, 234);
+          case 5:LEDBuffer.setRGB(index, 196, 196, 196);
+          case 6: LEDBuffer.setRGB(index, 127, 127, 127);
         }
         colorIndex += colorIndex == 6 ? -6 : 1;
         flagIndex += loop ? 1 : 0;
       }
     } else if (flagIndex == 5) {
       for (int index = 0; index < LEDBuffer.getLength(); index++) {
-        if (colorIndex == 0) {
-          LEDBuffer.setRGB(index, 252, 244, 52);
-        } else if (colorIndex == 1) {
-          LEDBuffer.setRGB(index, 255, 255, 255);
-        } else if (colorIndex == 2) {
-          LEDBuffer.setRGB(index, 156, 89, 209);
-        } else if (colorIndex == 3) {
-          LEDBuffer.setRGB(index, 44, 44, 44);
+         switch (colorIndex) {
+          case 0: LEDBuffer.setRGB(index, 252, 244, 52);
+          case 1: LEDBuffer.setRGB(index, 255, 255, 255);
+          case 2: LEDBuffer.setRGB(index, 156, 89, 209);
+          case 3: LEDBuffer.setRGB(index, 44, 44, 44);
         }
         colorIndex += colorIndex == 3 ? -3 : 1;
         flagIndex += loop ? 1 : 0;
       }
     } else if (flagIndex == 6) {
       for (int index = 0; index < LEDBuffer.getLength(); index++) {
-        if (colorIndex == 0) {
-          LEDBuffer.setRGB(index, 255, 33, 140);
-        } else if (colorIndex == 1) {
-          LEDBuffer.setRGB(index, 255, 216, 0);
-        } else if (colorIndex == 2) {
-          LEDBuffer.setRGB(index, 33, 177, 255);
+        switch (colorIndex) {
+          case 0: LEDBuffer.setRGB(index, 255, 33, 140);
+          case 1: LEDBuffer.setRGB(index, 255, 216, 0);
+          case 2: LEDBuffer.setRGB(index, 33, 177, 255);
         }
         colorIndex += colorIndex == 2 ? -2 : 1;
         flagIndex += loop ? 1 : 0;
       }
     } else if (flagIndex == 7) {
       for (int index = 0; index < LEDBuffer.getLength(); index++) {
-        if (colorIndex == 0) {
-          LEDBuffer.setRGB(index, 214, 2, 112);
-        } else if (colorIndex == 1) {
-          LEDBuffer.setRGB(index, 155, 79, 150);
-        } else if (colorIndex == 2) {
-          LEDBuffer.setRGB(index, 0, 56, 168);
+         switch (colorIndex) {
+          case 0: LEDBuffer.setRGB(index, 214, 2, 112);
+          case 1: LEDBuffer.setRGB(index, 155, 79, 150);
+          case 2: LEDBuffer.setRGB(index, 0, 56, 168);
         }
         colorIndex += colorIndex == 2 ? -2 : 1;
         flagIndex += loop ? 1 : 0;
       }
     } else if (flagIndex == 8) {
       for (int index = 0; index < LEDBuffer.getLength(); index++) {
-        if (colorIndex == 0 || colorIndex == 2) {
-          LEDBuffer.setRGB(index, 253, 139, 168);
-        } else if (colorIndex == 1) {
-          LEDBuffer.setRGB(index, 255, 255, 255);
+         switch (colorIndex) {
+          case 0: LEDBuffer.setRGB(index, 253, 139, 168);
+          case 1: LEDBuffer.setRGB(index, 255, 255, 255);
+          case 2: LEDBuffer.setRGB(index, 253, 139, 168);
         }
         colorIndex += colorIndex == 2 ? -2 : 1;
         flagIndex += loop ? 1 : 0;
       }
     } else if (flagIndex == 9) {
       for (int index = 0; index < LEDBuffer.getLength(); index++) {
-        if (colorIndex == 0 || colorIndex == 2) {
-          LEDBuffer.setRGB(index, 152, 191, 220);
-        } else if (colorIndex == 1) {
-          LEDBuffer.setRGB(index, 241, 245, 226);
+         switch (colorIndex) {
+          case 0: LEDBuffer.setRGB(index, 152, 191, 220);
+          case 1: LEDBuffer.setRGB(index, 241, 245, 226);
+          case 2: LEDBuffer.setRGB(index, 152, 191, 220);
         }
         colorIndex += colorIndex == 6 ? -6 : 1;
         flagIndex += loop ? 1 : 0;
       }
     } else if (flagIndex == 10) {
       for (int index = 0; index < LEDBuffer.getLength(); index++) {
-        if (colorIndex == 0) {
-          LEDBuffer.setRGB(index, 7, 141, 112);
-        } else if (colorIndex == 1) {
-          LEDBuffer.setRGB(index, 38, 206, 170);
-        } else if (colorIndex == 2) {
-          LEDBuffer.setRGB(index, 152, 232, 193);
-        } else if (colorIndex == 3) {
-          LEDBuffer.setRGB(index, 255, 255, 255);
-        } else if (colorIndex == 4) {
-          LEDBuffer.setRGB(index, 123, 173, 226);
-        } else if (colorIndex == 5) {
-          LEDBuffer.setRGB(index, 80, 73, 204);
-        } else if (colorIndex == 6) {
-          LEDBuffer.setRGB(index, 61, 26, 120);
+         switch (colorIndex) {
+          case 0: LEDBuffer.setRGB(index, 7, 141, 112);
+          case 1: LEDBuffer.setRGB(index, 38, 206, 170);
+          case 2: LEDBuffer.setRGB(index, 152, 232, 193);
+          case 3: LEDBuffer.setRGB(index, 255, 255, 255);
+          case 4: LEDBuffer.setRGB(index, 123, 173, 226);
+          case 5: LEDBuffer.setRGB(index, 80, 73, 204);
+          case 6: LEDBuffer.setRGB(index, 61, 26, 120);
         }
         colorIndex += colorIndex == 6 ? -6 : 1;
         flagIndex += loop ? 1 : 0;
       }
     } else if (flagIndex == 11) {
       for (int index = 0; index < LEDBuffer.getLength(); index++) {
-        if (colorIndex == 0) {
-          LEDBuffer.setRGB(index, 213, 45, 0);
-        } else if (colorIndex == 1) {
-          LEDBuffer.setRGB(index, 239, 118, 39);
-        } else if (colorIndex == 2) {
-          LEDBuffer.setRGB(index, 255, 154, 86);
-        } else if (colorIndex == 3) {
-          LEDBuffer.setRGB(index, 255, 255, 255);
-        } else if (colorIndex == 4) {
-          LEDBuffer.setRGB(index, 209, 98, 164);
-        } else if (colorIndex == 5) {
-          LEDBuffer.setRGB(index, 181, 86, 144);
-        } else if (colorIndex == 6) {
-          LEDBuffer.setRGB(index, 163, 2, 98);
+         switch (colorIndex) {
+          case 0: LEDBuffer.setRGB(index, 213, 45, 0);
+          case 1: LEDBuffer.setRGB(index, 239, 118, 39);
+          case 2: LEDBuffer.setRGB(index, 255, 154, 86);
+          case 3: LEDBuffer.setRGB(index, 255, 255, 255);
+          case 4: LEDBuffer.setRGB(index, 209, 98, 164);
+          case 5: LEDBuffer.setRGB(index, 181, 86, 144);
+          case 6: LEDBuffer.setRGB(index, 163, 2, 98);
         }
         colorIndex += colorIndex == 6 ? -6 : 1;
         flagIndex += loop ? 1 : 0;
       }
     } else if (flagIndex == 12) {
       for (int index = 0; index < LEDBuffer.getLength(); index++) {
-        if (colorIndex == 0) {
-          LEDBuffer.setRGB(index, 255, 255, 255);
-        } else if (colorIndex == 1) {
-          LEDBuffer.setRGB(index, 241, 187, 3);
-        } else if (colorIndex == 2) {
-          LEDBuffer.setRGB(index, 255, 255, 255);
-        } else if (colorIndex == 3) {
-          LEDBuffer.setRGB(index, 8, 158, 227);
-        } else if (colorIndex == 4) {
-          LEDBuffer.setRGB(index, 228, 5, 82)
-        } else if (colorIndex == 5) {
-          LEDBuffer.setRGB(index, 52, 12, 68);
+         switch (colorIndex) {
+          case 0: LEDBuffer.setRGB(index, 255, 255, 255);
+          case 1: LEDBuffer.setRGB(index, 241, 187, 3);
+          case 2: LEDBuffer.setRGB(index, 255, 255, 255);
+          case 3: LEDBuffer.setRGB(index, 8, 158, 227);
+          case 4: LEDBuffer.setRGB(index, 228, 5, 82);
+          case 5: LEDBuffer.setRGB(index, 52, 12, 68);
         }
         colorIndex += colorIndex == 5 ? -5 : 1;
         flagIndex += loop ? 1 : 0;
       }
     } else if (flagIndex == 13) {
       for (int index = 0; index < LEDBuffer.getLength(); index++) {
-        if (colorIndex == 0) {
-          LEDBuffer.setRGB(index, 254, 154, 206);
-        } else if (colorIndex == 1) {
-          LEDBuffer.setRGB(index, 255, 83, 191);
-        } else if (colorIndex == 2) {
-          LEDBuffer.setRGB(index, 32, 0, 68);
-        } else if (colorIndex == 3) {
-          LEDBuffer.setRGB(index, 103, 96, 254);
-        } else if (colorIndex == 4) {
-          LEDBuffer.setRGB(index, 142, 166, 255);
+         switch (colorIndex) {
+          case 0: LEDBuffer.setRGB(index, 254, 154, 206);
+          case 1: LEDBuffer.setRGB(index, 255, 83, 191);
+          case 2: LEDBuffer.setRGB(index, 32, 0, 68);
+          case 3: LEDBuffer.setRGB(index, 103, 96, 254);
+          case 4: LEDBuffer.setRGB(index, 142, 166, 255);
         }
         colorIndex += colorIndex == 4 ? -4 : 1;
         flagIndex += loop ? 1 : 0;
       }
     } else if (flagIndex == 14) {
       for (int index = 0; index < LEDBuffer.getLength(); index++) {
-        if (colorIndex == 0) {
-          LEDBuffer.setRGB(index, 255, 118, 164);
-        } else if (colorIndex == 1) {
-          LEDBuffer.setRGB(index, 255, 255, 255);
-        } else if (colorIndex == 2) {
-          LEDBuffer.setRGB(index, 192, 17, 215);
-        } else if (colorIndex == 3) {
-          LEDBuffer.setRGB(index, 0, 0, 0);
-        }else if (colorIndex == 4) {
-          LEDBuffer.setRGB(index, 47, 60, 190);
+         switch (colorIndex) {
+          case 0: LEDBuffer.setRGB(index, 255, 118, 164);
+          case 1: LEDBuffer.setRGB(index, 255, 255, 255);
+          case 2: LEDBuffer.setRGB(index, 192, 17, 215);
+          case 3: LEDBuffer.setRGB(index, 0, 0, 0);
+          case 4: LEDBuffer.setRGB(index, 47, 60, 190);
         }
       colorIndex += colorIndex == 3 ? -3 : 1;
       flagIndex += loop ? -flagIndex : 0;
