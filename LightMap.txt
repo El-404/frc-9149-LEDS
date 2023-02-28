@@ -1,0 +1,16 @@
+This is what the LEDS are going to for each button, and events.
+
+
+Constants:
+
+startup: flash blue/gold 2s -> Alliance.Invalid ? passive : alliance color
+in-game: alliance color
+passive: rainbow 10s -> fotr 10s -> rand color 5s -> solid rand 5s
+Light button: switch through fotr as passive
+
+
+on Events:
+
+outake: rainbow 3s
+intake: blue/gold 3s
+move 4-bar: flash alliance color 1s
