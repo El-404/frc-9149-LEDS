@@ -8,6 +8,29 @@ class Lights {
   static AddressableLED LED = new AddressableLED(0);
   static AddressableLEDBuffer LEDBuffer = new AddressableLEDBuffer(LED_Length);
   
+  
+  
+  //use inside startup
+  while (true) {
+    try {
+      rainbow();
+      Thread.sleep(10)
+
+      fotr();
+      Thread.sleep(10)
+
+      changeColor(true);
+      Thread.sleep(5);
+
+      changeColor(false);
+      Thread.sleep(5);
+    } catch (Exception e) {}
+  }
+  
+  
+  
+  
+  
   public static void rainbow () {
     while (true) {
       time += .005;
